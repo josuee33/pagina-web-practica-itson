@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Guía informativa sobre la carrera de Ingeniería en Software en el ITSON: qué se estudia, perfil de ingreso y egreso, plan de formación, campo laboral, campus en Obregón, Guaymas y Navojoa, y cómo es el proceso de admisión." />
+<link rel="icon" href="data:," />
+<title>Ingeniería en Software en el ITSON — Guía de la carrera</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Archivo:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f6f5;
+    --surface:#ffffff;
+    --surface-2:#e9efec;
+    --ink:#12211f;
+    --ink-2:#43534f;
+    --line:#d3ddd8;
+    --navy:#0b2e4f;
+    --navy-2:#0e3a63;
+    --teal:#0e7c6b;
+    --teal-soft:#dff0eb;
+    --amber:#e9a426;
+    --amber-soft:#fdf0d3;
+    --code-bg:#0d1b2e;
+    --code-ink:#dbeafe;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(11,46,79,.10);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0c1216;
+      --surface:#131d22;
+      --surface-2:#1a262c;
+      --ink:#e8efec;
+      --ink-2:#a9bab3;
+      --line:#2a3a3f;
+      --navy:#7db4e6;
+      --navy-2:#a8cdef;
+      --teal:#3ec2ab;
+      --teal-soft:#14332d;
+      --amber:#f0b93e;
+      --amber-soft:#33290f;
+      --code-bg:#0a1524;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.6;font-size:16.5px}
+  a{color:var(--teal)}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+
+  /* Nav */
+  .topnav{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topnav-inner{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
+  .brand{font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:-.02em;font-size:1.02rem;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
+  .brand .tag{background:var(--navy);color:#fff;font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:600;padding:4px 8px;border-radius:6px;letter-spacing:.06em}
+  @media (prefers-color-scheme: dark){ .brand .tag{background:var(--teal);color:#081511} }
+  .navlinks{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+  .navlinks a{color:var(--ink-2);text-decoration:none;font-size:.92rem;font-weight:500;padding:7px 10px;border-radius:8px}
+  .navlinks a:hover{background:var(--surface-2);color:var(--ink)}
+
+  /* Hero */
+  .hero{padding:44px 0 10px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);font-weight:600;margin:0 0 14px}
+  h1{font-family:"Archivo",sans-serif;font-weight:900;letter-spacing:-.03em;line-height:.98;font-size:clamp(2.4rem,5.4vw,4rem);margin:0 0 18px;color:var(--ink)}
+  h1 .accent{color:var(--teal)}
+  .lead{font-size:1.13rem;color:var(--ink-2);margin:0 0 22px;max-width:34em}
+  .lead strong{color:var(--ink)}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:.98rem;padding:12px 18px;border-radius:10px;border:1px solid transparent}
+  .btn-primary{background:var(--navy);color:#fff}
+  @media (prefers-color-scheme: dark){ .btn-primary{background:var(--teal);color:#081511} }
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+  .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:520px}
+  .fact{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .fact b{display:block;font-family:"Archivo",sans-serif;font-size:1.05rem;letter-spacing:-.01em}
+  .fact span{font-size:.85rem;color:var(--ink-2)}
+  .hero-photo{position:relative}
+  .hero-photo img{width:100%;height:100%;min-height:340px;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
+  .hero-photo figcaption{position:absolute;left:14px;bottom:14px;right:14px;background:rgba(7,20,36,.82);color:#eaf2ff;border-radius:10px;padding:10px 14px;font-size:.86rem;backdrop-filter:blur(6px)}
+  .hero-photo figcaption b{color:#fff}
+
+  /* Code strip */
+  .codestrip{margin:34px 0 6px;background:var(--code-bg);border-radius:14px;padding:18px 20px;color:var(--code-ink);overflow-x:auto;box-shadow:var(--shadow)}
+  .codestrip pre{margin:0;font-family:"IBM Plex Mono",monospace;font-size:.86rem;line-height:1.7;white-space:pre}
+  .c-kw{color:#7dd3fc}.c-str{color:#fbbf24}.c-cm{color:#7d8aa0}.c-fn{color:#6ee7b7}
+
+  section{padding:52px 0 8px}
+  .sec-head{max-width:720px;margin-bottom:26px}
+  .sec-head h2{font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:-.025em;font-size:clamp(1.7rem,3.4vw,2.3rem);line-height:1.1;margin:0 0 10px}
+  .sec-head p{color:var(--ink-2);margin:0;font-size:1.05rem}
+  .sec-num{font-family:"IBM Plex Mono",monospace;color:var(--teal);font-weight:600;font-size:.85rem;letter-spacing:.08em}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .card h3{font-family:"Archivo",sans-serif;font-size:1.18rem;margin:0 0 10px;letter-spacing:-.01em}
+  .card p{color:var(--ink-2);margin:0 0 12px}
+  .card p:last-child{margin-bottom:0}
+  .quote{border-left:4px solid var(--amber);background:var(--amber-soft);border-radius:0 12px 12px 0;padding:18px 20px;margin:0}
+  .quote p{margin:0;font-size:1.02rem}
+  .quote footer{margin-top:10px;font-size:.85rem;color:var(--ink-2);font-family:"IBM Plex Mono",monospace}
+
+  ul.check{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  ul.check li{display:flex;gap:11px;align-items:flex-start;color:var(--ink-2)}
+  ul.check li b{color:var(--ink)}
+  .check-ic{flex:0 0 auto;width:22px;height:22px;border-radius:6px;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center;font-size:.8rem;font-weight:700;margin-top:2px}
+
+  /* Cycle tabs */
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .tab-btn{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:600;font-size:.95rem;padding:10px 16px;border-radius:999px;cursor:pointer}
+  .tab-btn[aria-selected="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+  @media (prefers-color-scheme: dark){ .tab-btn[aria-selected="true"]{background:var(--teal);color:#081511;border-color:var(--teal)} }
+  .tab-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start}
+  .tab-panel .big-num{font-family:"Archivo",sans-serif;font-weight:900;font-size:3.2rem;line-height:1;color:var(--teal);letter-spacing:-.04em}
+  .tab-panel h3{font-family:"Archivo",sans-serif;margin:0 0 8px;font-size:1.3rem}
+  .tab-panel p{color:var(--ink-2);margin:0 0 12px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:.78rem;background:var(--surface-2);border:1px solid var(--line);padding:5px 10px;border-radius:999px;color:var(--ink)}
+
+  /* Journey */
+  .journey{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .stage{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;position:relative}
+  .stage .when{font-family:"IBM Plex Mono",monospace;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);font-weight:600}
+  .stage h3{font-family:"Archivo",sans-serif;margin:8px 0 8px;font-size:1.15rem}
+  .stage p{color:var(--ink-2);margin:0 0 12px;font-size:.97rem}
+  .stage ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:.95rem;display:grid;gap:5px}
+  .note{margin-top:16px;font-size:.92rem;color:var(--ink-2);background:var(--surface-2);border-radius:10px;padding:14px 16px}
+
+  /* Jobs */
+  .jobs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .job{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .job .ic{width:42px;height:42px;border-radius:10px;background:var(--teal-soft);display:grid;place-items:center;margin-bottom:14px;color:var(--teal)}
+  .job h3{font-family:"Archivo",sans-serif;margin:0 0 8px;font-size:1.08rem}
+  .job p{color:var(--ink-2);margin:0;font-size:.96rem}
+  .split-img{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch;margin-top:22px}
+  .split-img img{width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:var(--radius)}
+  .split-img .card{display:flex;flex-direction:column;justify-content:center}
+
+  /* Campus */
+  .campus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .campus{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .campus h3{font-family:"Archivo",sans-serif;margin:0 0 4px;font-size:1.15rem}
+  .campus .city{font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--teal);font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+  .campus dl{margin:14px 0 0;display:grid;gap:10px;font-size:.93rem}
+  .campus dt{font-weight:600}
+  .campus dd{margin:2px 0 0;color:var(--ink-2)}
+  .campus a{word-break:break-all}
+
+  /* Steps */
+  .steps{list-style:none;margin:0;padding:0;display:grid;gap:0}
+  .steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .steps li:last-child{border-bottom:none}
+  .step-n{width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-family:"IBM Plex Mono",monospace;font-weight:600;display:grid;place-items:center;font-size:.95rem}
+  @media (prefers-color-scheme: dark){ .step-n{background:var(--teal);color:#081511} }
+  .steps h3{margin:2px 0 6px;font-size:1.05rem;font-family:"Archivo",sans-serif}
+  .steps p{margin:0;color:var(--ink-2);font-size:.97rem}
+  .docs{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .doc-tag{border:1px dashed var(--teal);color:var(--teal);font-weight:600;font-size:.88rem;padding:7px 12px;border-radius:8px}
+
+  /* FAQ */
+  .faq{display:grid;gap:10px}
+  .faq-item{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .faq-q{width:100%;appearance:none;background:none;border:none;font:inherit;text-align:left;font-weight:600;padding:17px 20px;cursor:pointer;display:flex;justify-content:space-between;gap:14px;align-items:center;color:var(--ink)}
+  .faq-q .arr{color:var(--teal);font-family:"IBM Plex Mono",monospace;transition:transform .2s}
+  .faq-item.open .faq-q .arr{transform:rotate(45deg)}
+  .faq-a{display:none;padding:0 20px 18px;color:var(--ink-2)}
+  .faq-item.open .faq-a{display:block}
+  .faq-a p{margin:0}
+
+  footer.site{margin-top:64px;border-top:1px solid var(--line);padding:30px 0 44px}
+  footer.site h3{font-family:"Archivo",sans-serif;margin:0 0 12px;font-size:1rem}
+  footer.site ul{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:7px;font-size:.94rem}
+  footer.site .fine{color:var(--ink-2);font-size:.86rem;max-width:70ch}
+
+  @media (max-width:900px){
+    .hero-grid,.two-col,.split-img{grid-template-columns:1fr}
+    .journey,.jobs,.campus-grid{grid-template-columns:1fr 1fr}
+    .hero-photo img{min-height:240px}
+  }
+  @media (max-width:600px){
+    .codestrip{overflow-x:visible;padding:16px}
+    .codestrip pre{white-space:pre-wrap;word-break:break-word;font-size:.78rem;line-height:1.65}
+    .journey,.jobs,.campus-grid{grid-template-columns:1fr}
+    .facts{grid-template-columns:1fr 1fr}
+    .tab-panel{grid-template-columns:1fr}
+    .tab-panel .big-num{font-size:2.2rem}
+    body{font-size:16px}
+    section{padding:40px 0 4px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *{transition:none !important}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap topnav-inner">
+    <a class="brand" href="#inicio"><span class="tag">ISW · ITSON</span> Ingeniería en Software</a>
+    <div class="navlinks">
+      <a href="#carrera">La carrera</a>
+      <a href="#ruta">Ruta de estudio</a>
+      <a href="#empleo">Campo laboral</a>
+      <a href="#campus">Campus</a>
+      <a href="#admision">Admisión</a>
+      <a href="#faq">Preguntas</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Instituto Tecnológico de Sonora · Sonora, México</p>
+      <h1>Ingeniería en <span class="accent">Software</span> en el ITSON</h1>
+      <p class="lead">No es solo aprender a programar. Es aprender a <strong>idear, diseñar, construir, probar y gestionar software</strong> con estándares internacionales de calidad — desde la idea de un cliente hasta un producto que funciona en el mercado real.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://www.itson.mx/admisiones" target="_blank" rel="noopener">Ir a Admisiones ITSON ↗</a>
+        <a class="btn btn-ghost" href="#ruta">Ver cómo se estudia</a>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>Presencial</b><span>Modalidad semestral</span></div>
+        <div class="fact"><b>3 unidades</b><span>Obregón · Guaymas · Navojoa</span></div>
+        <div class="fact"><b>Computación y Diseño</b><span>Departamento de adscripción</span></div>
+        <div class="fact"><b>Inglés B1+</b><span>Equivale a 492–519 pts TOEFL ITP</span></div>
+      </div>
+    </div>
+    <figure class="hero-photo" style="margin:0">
+      <img src="assets/hero-itson.webp" alt="Edificio de Rectoría del ITSON en Ciudad Obregón, con estudiantes caminando por la explanada del campus" />
+      <figcaption><b>Campus Náinari, Ciudad Obregón.</b> El ITSON es una universidad pública y autónoma de Sonora, fundada en 1955. Su lema: “Educar para trascender”.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <div class="codestrip" aria-hidden="true"><pre><span class="c-cm">// Lo que hace un ingeniero en software, en una línea por etapa</span>
+<span class="c-kw">const</span> proyecto = <span class="c-fn">crearSoftware</span>()
+  .<span class="c-fn">especificarRequisitos</span>()   <span class="c-cm">// entender el problema real</span>
+  .<span class="c-fn">analizarYDisenar</span>()        <span class="c-cm">// arquitectura, datos, interfaces</span>
+  .<span class="c-fn">construir</span>()               <span class="c-cm">// programar con buenas prácticas</span>
+  .<span class="c-fn">probar</span>()                  <span class="c-cm">// calidad y seguridad</span>
+  .<span class="c-fn">administrarProyecto</span>()     <span class="c-cm">// equipo, tiempos y entrega</span>
+  .<span class="c-fn">desplegar</span>(<span class="c-str">"mercado internacional"</span>);</pre></div>
+  </div>
+</header>
+
+<!-- LA CARRERA -->
+<section id="carrera">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01 — LA CARRERA</span>
+      <h2>Qué es y qué busca formar</h2>
+      <p>El programa se imparte bajo un modelo educativo basado en competencias profesionales. Esto significa que no basta con aprobar materias: tienes que demostrar que puedes aplicar lo aprendido en problemas reales.</p>
+    </div>
+    <div class="two-col">
+      <blockquote class="quote">
+        <p>“Formar profesionistas íntegros, comprometidos con su labor, innovadores, emprendedores y capaces de idear, diseñar, construir y gestionar eficientemente software competitivo para el mercado internacional, que contribuyan al crecimiento y progreso de la sociedad.”</p>
+        <footer>— Objetivo oficial del programa, ITSON</footer>
+      </blockquote>
+      <div class="card">
+        <h3>El ITSON en contexto</h3>
+        <p>El Instituto Tecnológico de Sonora nació el <b>21 de septiembre de 1955</b> como Instituto Justo Sierra, por iniciativa de la sociedad de Cajeme. En <b>1976</b> obtuvo su autonomía universitaria.</p>
+        <p>Hoy es una universidad pública estatal con campus en Ciudad Obregón (Centro y Náinari), Navojoa, Guaymas y Empalme. Ingeniería en Software depende del Departamento de Computación y Diseño y es una de sus carreras con mayor demanda.</p>
+      </div>
+    </div>
+
+    <div style="height:22px"></div>
+    <div class="two-col">
+      <div class="card">
+        <h3>¿Es para ti? Perfil de ingreso</h3>
+        <p>No necesitas ser un experto programando desde la prepa, pero sí ayuda llegar con estas bases e intereses:</p>
+        <ul class="check">
+          <li><span class="check-ic">✓</span><span><b>Matemáticas y lógica:</b> gusto por razonar, buscar patrones y resolver problemas paso a paso.</span></li>
+          <li><span class="check-ic">✓</span><span><b>Interés real por la tecnología:</b> curiosidad por cómo funcionan las apps, los sistemas y las plataformas que usas a diario.</span></li>
+          <li><span class="check-ic">✓</span><span><b>Trabajo en equipo y comunicación:</b> el software casi nunca se construye solo; hay que explicar ideas y escuchar a clientes y compañeros.</span></li>
+          <li><span class="check-ic">✓</span><span><b>Disposición a actualizarte:</b> lenguajes y herramientas cambian constantemente; aprender de forma autónoma es parte del trabajo.</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Perfil de egreso</h3>
+        <p>Al graduarte, serás un profesionista <b>socialmente comprometido, íntegro, innovador y emprendedor</b>, capaz de desarrollar software aplicando procesos, modelos, marcos normativos y estándares de calidad internacional.</p>
+        <p>Podrás desempeñarte en especificación de requisitos, análisis, diseño, construcción, pruebas y administración de proyectos — dentro de una empresa, en una casa de software o creando tu propia empresa.</p>
+        <p>Además, el programa pide acreditar un nivel de <b>inglés B1+</b> del Marco Común Europeo, clave porque gran parte de la documentación, las comunidades y los clientes del software están en inglés.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETENCIAS / CICLO -->
+<section id="ciclo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">02 — EL CICLO DEL SOFTWARE</span>
+      <h2>Las tres competencias centrales</h2>
+      <p>Todo el plan gira alrededor de tres competencias profesionales. Toca cada una para ver qué significa en la práctica:</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Competencias profesionales">
+      <button class="tab-btn" role="tab" aria-selected="true" data-tab="0">1 · Diseñar</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="1">2 · Construir</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="2">3 · Administrar proyectos</button>
+    </div>
+    <div class="tab-panel" id="tabPanel" role="tabpanel"></div>
+  </div>
+</section>
+
+<!-- RUTA -->
+<section id="ruta">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">03 — RUTA DE ESTUDIO</span>
+      <h2>Cómo avanza la formación</h2>
+      <p>La carrera es semestral y presencial. Aunque la retícula exacta se consulta en el portal oficial, la formación avanza en tres grandes momentos:</p>
+    </div>
+    <div class="journey">
+      <article class="stage">
+        <span class="when">Inicio de la carrera</span>
+        <h3>Fundamentos</h3>
+        <p>Construyes la base matemática y computacional sobre la que va todo lo demás.</p>
+        <ul>
+          <li>Algoritmos computacionales y lógica de programación</li>
+          <li>Matemáticas para ingeniería</li>
+          <li>Fundamentos de computación y sistemas</li>
+          <li>Formación general e inglés</li>
+        </ul>
+      </article>
+      <article class="stage">
+        <span class="when">Parte media</span>
+        <h3>Especialidad</h3>
+        <p>Pasas de ejercicios a sistemas completos, trabajando en equipo como en una empresa real.</p>
+        <ul>
+          <li>Programación y estructuras de datos</li>
+          <li>Bases de datos y sistemas operativos</li>
+          <li>Análisis y diseño de software</li>
+          <li>Interfaces de usuario y desarrollo web / móvil</li>
+        </ul>
+      </article>
+      <article class="stage">
+        <span class="when">Cierre de la carrera</span>
+        <h3>Práctica y especialización</h3>
+        <p>Aplicas todo en proyectos reales y eliges el rumbo que más te interesa.</p>
+        <ul>
+          <li>Pruebas, calidad y seguridad del software</li>
+          <li>Administración de proyectos de desarrollo</li>
+          <li>Temas avanzados como inteligencia artificial</li>
+          <li>Prácticas profesionales y emprendimiento</li>
+        </ul>
+      </article>
+    </div>
+    <p class="note"><b>Importante:</b> los nombres y el orden exacto de las asignaturas corresponden al plan de estudios vigente del ITSON, que se actualiza periódicamente. Consúltalo siempre en la <a href="https://sandbox.itson.edu.mx/oferta/isw/Paginas/isw.aspx" target="_blank" rel="noopener">página oficial del programa</a> antes de inscribirte.</p>
+
+    <div class="split-img">
+      <img src="assets/lab.jpg" alt="Estudiantes de computación trabajando en equipo frente a computadoras con código en pantalla en un laboratorio universitario" />
+      <div class="card">
+        <h3>Aprender haciendo, en equipo</h3>
+        <p>Gran parte del trabajo es colaborativo: analizar un problema, repartir tareas, revisar el código de otros y defender tus decisiones de diseño. Esas son justo las competencias genéricas que el ITSON busca desarrollar: trabajo en equipo, comunicación efectiva, solución de problemas, aprendizaje autónomo y emprendimiento.</p>
+        <p>También forman parte del sello institucional la integridad, la ciudadanía responsable y el compromiso social: el software que construyas tiene usuarios reales y consecuencias reales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMPLEO -->
+<section id="empleo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">04 — CAMPO LABORAL</span>
+      <h2>De qué puedes trabajar</h2>
+      <p>Las áreas de desempeño que declara el propio programa son cinco. En el mercado, se traducen en puestos como estos:</p>
+    </div>
+    <div class="jobs">
+      <article class="job">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+        <h3>Desarrollador / programador</h3>
+        <p>Construyes aplicaciones web, móviles, de escritorio o servicios en la nube a partir de especificaciones de diseño, cuidando calidad y seguridad.</p>
+      </article>
+      <article class="job">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3>Analista de requisitos y diseño</h3>
+        <p>Entiendes qué necesita una organización, lo conviertes en requisitos claros y diseñas la solución: arquitectura, datos e interfaces.</p>
+      </article>
+      <article class="job">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Probador / QA</h3>
+        <p>Verificas que el software haga lo que debe, sin fallas ni huecos de seguridad, usando las mejores prácticas de pruebas y aseguramiento de calidad.</p>
+      </article>
+      <article class="job">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Líder técnico / de proyecto</h3>
+        <p>Coordinas equipos de desarrollo, planeas entregas y cuidas que el proyecto cumpla tiempos, costos y calidad total del producto.</p>
+      </article>
+      <article class="job">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <h3>En empresas y gobierno</h3>
+        <p>Empresas de desarrollo de software, empresas con su propia área de sistemas y organizaciones públicas o privadas que necesitan software a la medida.</p>
+      </article>
+      <article class="job">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4 7.2 16.9l.9-5.4L4.2 7.7l5.4-.8z"/></svg></div>
+        <h3>Freelance o tu propia empresa</h3>
+        <p>El programa fomenta el emprendimiento: puedes ejercer de forma independiente o fundar tu propia empresa de desarrollo, incluso para clientes internacionales.</p>
+      </article>
+    </div>
+    <div class="split-img">
+      <div class="card">
+        <h3>Por qué hay demanda</h3>
+        <p>Cada vez más procesos — ventas, salud, educación, logística, gobierno — dependen de software. Eso mantiene una demanda constante de personas que no solo sepan programar, sino que entiendan el ciclo completo: requisitos, diseño, construcción, pruebas y gestión.</p>
+        <p>El enfoque del ITSON en estándares internacionales y en inglés B1+ apunta justo a eso: que puedas competir por proyectos y empleos fuera de Sonora y de México, incluso trabajando de forma remota.</p>
+      </div>
+      <img src="assets/team.jpg" alt="Equipo de desarrollo de software revisando código juntos frente a varios monitores en una oficina" />
+    </div>
+  </div>
+</section>
+
+<!-- CAMPUS -->
+<section id="campus">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">05 — CAMPUS</span>
+      <h2>Dónde se imparte</h2>
+      <p>Ingeniería en Software se ofrece en tres unidades del ITSON. Estos son los responsables de programa y contactos publicados por la propia institución:</p>
+    </div>
+    <div class="campus-grid">
+      <article class="campus">
+        <span class="city">Ciudad Obregón</span>
+        <h3>Unidad Obregón · Náinari</h3>
+        <dl>
+          <div><dt>Responsable de programa</dt><dd>Mtra. Martha Eloisa Larrínaga Hernández</dd></div>
+          <div><dt>Ubicación</dt><dd>Cubículo 31, Edificio de Computación y Diseño (1800), Campus Náinari. Antonio Caso S/N y E. Kino, Col. Villa ITSON, C.P. 85130</dd></div>
+          <div><dt>Teléfono</dt><dd>+52 (644) 410-90-01, ext. 1531</dd></div>
+        </dl>
+      </article>
+      <article class="campus">
+        <span class="city">Guaymas</span>
+        <h3>Unidad Guaymas</h3>
+        <dl>
+          <div><dt>Responsable de programa</dt><dd>Mtro. Ricardo Daniel Carrasco Correa</dd></div>
+          <div><dt>Ubicación</dt><dd>Cubículo 1, Centro de Estudios de Ingenierías (CEI), planta alta, Campus Guaymas. Carretera al Aeropuerto Km 3, C.P. 85400</dd></div>
+          <div><dt>Contacto</dt><dd>+52 (622) 221-00-32 / 221-00-33, ext. 6074<br><a href="mailto:isw-guaymas@itson.edu.mx">isw-guaymas@itson.edu.mx</a></dd></div>
+        </dl>
+      </article>
+      <article class="campus">
+        <span class="city">Navojoa</span>
+        <h3>Unidad Navojoa</h3>
+        <dl>
+          <div><dt>Responsable de programa</dt><dd>Mtro. José de Jesús Soto Padilla</dd></div>
+          <div><dt>Ubicación</dt><dd>Cubículo 10, Centro Académico Administrativo (CAA), Campus Navojoa. Ramón Corona y Aguascalientes S/N, Col. ITSON</dd></div>
+          <div><dt>Contacto</dt><dd>+52 (642) 422-59-29, ext. 5119<br><a href="mailto:isw-navojoa@itson.edu.mx">isw-navojoa@itson.edu.mx</a></dd></div>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISIÓN -->
+<section id="admision">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">06 — ADMISIÓN</span>
+      <h2>Cómo entrar</h2>
+      <p>El registro se hace en línea en el portal de admisiones del ITSON. En términos generales, el proceso sigue estos pasos:</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <span class="step-n">1</span>
+        <div><h3>Haz tu solicitud en línea</h3><p>Entra a <a href="https://www.itson.mx/admisiones" target="_blank" rel="noopener">itson.mx/admisiones</a> durante la convocatoria vigente, elige Ingeniería en Software y la unidad donde quieres estudiar, y llena tu registro.</p></div>
+      </li>
+      <li>
+        <span class="step-n">2</span>
+        <div><h3>Presenta el examen de admisión</h3><p>Imprime tu ficha, cubre la cuota del examen si aplica y preséntalo en la fecha asignada. Lleva tus documentos para validación.</p></div>
+      </li>
+      <li>
+        <span class="step-n">3</span>
+        <div><h3>Consulta resultados y entrega documentos</h3><p>Si fuiste aceptado, entrega tu documentación en la unidad correspondiente dentro del periodo indicado.</p>
+          <div class="docs"><span class="doc-tag">Acta de nacimiento</span><span class="doc-tag">Certificado de preparatoria</span><span class="doc-tag">CURP</span></div>
+        </div>
+      </li>
+      <li>
+        <span class="step-n">4</span>
+        <div><h3>Inscríbete e inicia clases</h3><p>Completa tu inscripción, carga tus primeras materias del semestre y empieza la carrera.</p></div>
+      </li>
+    </ol>
+    <p class="note"><b>Referencia reciente:</b> para el ingreso de <b>enero de 2027</b>, el ITSON abrió su proceso de admisión del <b>28 de septiembre al 28 de octubre de 2026</b>, con lugares en Obregón, Navojoa, Guaymas y Empalme — Ingeniería en Software estuvo entre los programas ofertados en Guaymas. Las fechas cambian cada ciclo, así que confirma siempre la convocatoria vigente en el portal oficial.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">07 — DUDAS FRECUENTES</span>
+      <h2>Preguntas que todos se hacen</h2>
+    </div>
+    <div class="faq" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q">¿Ingeniería en Software es lo mismo que programar?<span class="arr">+</span></button>
+        <div class="faq-a"><p>No. Programar es una parte — la construcción —. La ingeniería de software abarca el proceso completo: entender qué se necesita (requisitos), analizar y diseñar la solución, construirla, probarla y administrar el proyecto para entregarla con calidad. Por eso el egresado también puede liderar equipos y proyectos, no solo escribir código.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Necesito saber programar antes de entrar?<span class="arr">+</span></button>
+        <div class="faq-a"><p>No es un requisito de ingreso. La carrera arranca con fundamentos como algoritmos computacionales. Lo que sí conviene traer es gusto por las matemáticas, la lógica y la resolución de problemas. Si ya programaste algo por tu cuenta, tendrás ventaja al inicio, pero el plan está pensado para empezar desde la base.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿En qué se diferencia de Ingeniería en Sistemas o Ciencias de la Computación?<span class="arr">+</span></button>
+        <div class="faq-a"><p>Ingeniería en Software se concentra en el proceso de crear productos de software: requisitos, diseño, construcción, pruebas y gestión de proyectos, con estándares de calidad. Otras carreras cercanas ponen más peso en hardware, redes, infraestructura o en la teoría de la computación. Si tu interés es construir aplicaciones y sistemas que la gente usa, ISW es la ruta directa.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Por qué piden inglés B1+?<span class="arr">+</span></button>
+        <div class="faq-a"><p>Porque el software se hace en un entorno global: la documentación técnica, las comunidades de desarrolladores y muchos clientes trabajan en inglés. El ITSON pide comunicarse a nivel B1+ del Marco Común Europeo (equivalente a 492–519 puntos TOEFL ITP) para que puedas desenvolverte en contextos profesionales en ese idioma.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Puedo trabajar mientras estudio o al egresar, fuera de Sonora?<span class="arr">+</span></button>
+        <div class="faq-a"><p>El programa está pensado para el mercado internacional: estándares globales, inglés y competencias de emprendimiento. Los egresados pueden trabajar en empresas de desarrollo de cualquier parte, de forma remota como freelance, o crear su propia empresa de software. Durante la carrera, las prácticas profesionales son el puente habitual hacia el primer empleo.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Dónde consulto el plan de estudios oficial y las fechas exactas?<span class="arr">+</span></button>
+        <div class="faq-a"><p>En la <a href="https://sandbox.itson.edu.mx/oferta/isw/Paginas/isw.aspx" target="_blank" rel="noopener">página oficial de Ingeniería en Software del ITSON</a> y en <a href="https://www.itson.mx/admisiones" target="_blank" rel="noopener">itson.mx/admisiones</a> para la convocatoria vigente. Esta página es una guía informativa; la información oficial y actualizada es siempre la del ITSON.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <h3>Fuentes y enlaces oficiales</h3>
+    <ul>
+      <li><a href="https://sandbox.itson.edu.mx/oferta/isw/Paginas/isw.aspx" target="_blank" rel="noopener">ITSON — Ingeniería en Software (objetivo, perfiles, competencias y contactos por unidad)</a></li>
+      <li><a href="https://www.itson.mx/admisiones" target="_blank" rel="noopener">ITSON — Portal de Admisiones</a></li>
+      <li><a href="https://itson.mx/oferta" target="_blank" rel="noopener">ITSON — Oferta educativa</a></li>
+    </ul>
+    <p class="fine">Página informativa elaborada con datos públicos del ITSON consultados en noviembre de 2026. No es una página oficial del Instituto Tecnológico de Sonora. Verifica requisitos, planes de estudio, lugares disponibles y fechas de admisión directamente en los canales oficiales antes de tomar una decisión.</p>
+  </div>
+</footer>
+
+<script>
+  // Tabs: competencias centrales
+  var competencias = [
+    {
+      num: "01",
+      title: "Diseña software",
+      text: "Diseña software a través de la aplicación de metodologías, herramientas y estándares apropiados al problema. Es la etapa de pensar antes de construir: arquitectura, modelos de datos, interfaces y decisiones técnicas que sostendrán todo el producto.",
+      chips: ["Especificación de requisitos", "Análisis", "Arquitectura", "Diseño de interfaces", "Estándares internacionales"]
+    },
+    {
+      num: "02",
+      title: "Construye software",
+      text: "Construye software a partir de especificaciones de diseño, haciendo uso de las mejores prácticas que aseguren la calidad y seguridad del producto. Aquí vive la programación, pero también las pruebas: que funcione, que sea seguro y que se pueda mantener.",
+      chips: ["Programación", "Bases de datos", "Pruebas de software", "Calidad", "Seguridad"]
+    },
+    {
+      num: "03",
+      title: "Administra proyectos",
+      text: "Administra proyectos de desarrollo de software mediante la aplicación de procesos, modelos y estándares que contribuyan a la calidad total del producto. Planear tiempos, coordinar personas y entregar: la competencia que convierte a un programador en líder de equipo o en fundador de su propia empresa.",
+      chips: ["Gestión de proyectos", "Liderazgo técnico", "Procesos y modelos", "Calidad total", "Emprendimiento"]
+    }
+  ];
+  var panel = document.getElementById('tabPanel');
+  var tabBtns = document.querySelectorAll('.tab-btn');
+  function renderTab(i){
+    var c = competencias[i];
+    var chipsHtml = c.chips.map(function(ch){ return '<span class="chip">' + ch + '</span>'; }).join('');
+    panel.innerHTML = '<div class="big-num">' + c.num + '</div><div><h3>' + c.title + '</h3><p>' + c.text + '</p><div class="chips">' + chipsHtml + '</div></div>';
+    tabBtns.forEach(function(b, idx){ b.setAttribute('aria-selected', idx === i ? 'true' : 'false'); });
+  }
+  tabBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){ renderTab(parseInt(btn.getAttribute('data-tab'), 10)); });
+  });
+  renderTab(0);
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(it){ it.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>

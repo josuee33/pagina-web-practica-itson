@@ -3,138 +3,157 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="color-scheme" content="light dark" />
 <meta name="description" content="Ingeniería en Software ITSON, Plan de Estudios 2023: la carrera, perfiles de ingreso y egreso, mapa curricular, campo laboral, contacto y solicitud de información." />
 <link rel="icon" href="data:," />
 <title>Ingeniería en Software ITSON — Plan 2023</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Archivo:wght@700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#f4f6f5; --surface:#ffffff; --surface-2:#e9efec; --ink:#12211f; --ink-2:#43534f;
-    --line:#d3ddd8; --navy:#0b2e4f; --navy-2:#0e3a63; --teal:#0e7c6b; --teal-soft:#dff0eb;
-    --amber:#e9a426; --amber-soft:#fdf0d3; --radius:14px; --shadow:0 10px 30px rgba(11,46,79,.10);
-  }
-  @media (prefers-color-scheme: dark){
-    :root{ --bg:#0c1216; --surface:#131d22; --surface-2:#1a262c; --ink:#e8efec; --ink-2:#a9bab3;
-      --line:#2a3a3f; --navy:#7db4e6; --navy-2:#a8cdef; --teal:#3ec2ab; --teal-soft:#14332d;
-      --amber:#f0b93e; --amber-soft:#33290f; --shadow:0 10px 30px rgba(0,0,0,.35); }
+    --navy:#0a1f5c; --navy-2:#0e2a7a; --blue:#0f5fb8; --blue-light:#5ea9e9;
+    --sky:#bfe6f7; --sky-soft:#cfe3f2; --sky-2:#d9ecf8;
+    --ink:#111827; --ink-2:#374151; --white:#ffffff; --line:#dbe7f3;
+    --radius:20px; --shadow:0 10px 28px rgba(10,31,92,.13);
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.6;font-size:16.5px}
-  a{color:var(--teal)}
+  body{margin:0;background:var(--white);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.6;font-size:16.5px}
+  a{color:var(--blue)}
   img{max-width:100%;display:block}
   .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
-  section{padding:52px 0 8px;scroll-margin-top:76px}
-  .sec-head{max-width:760px;margin-bottom:26px}
-  .sec-head h2{font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:-.025em;font-size:clamp(1.7rem,3.4vw,2.3rem);line-height:1.1;margin:0 0 10px}
-  .sec-head p{color:var(--ink-2);margin:0;font-size:1.05rem}
-  .sec-num{font-family:"IBM Plex Mono",monospace;color:var(--teal);font-weight:600;font-size:.85rem;letter-spacing:.08em}
+  section{padding:56px 0 20px;scroll-margin-top:72px}
+  h2{font-family:"Archivo",sans-serif;color:var(--navy);font-weight:800;letter-spacing:-.02em;font-size:clamp(1.7rem,3.4vw,2.3rem);line-height:1.15;margin:0 0 12px}
+  h3{font-family:"Archivo",sans-serif;color:var(--navy);margin:0 0 10px}
+  p{margin:0 0 12px;color:var(--ink-2)}
+  p:last-child{margin-bottom:0}
 
-  /* Nav — botones del PDF */
-  .topnav{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .topnav-inner{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
-  .brand{font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:-.02em;font-size:1.02rem;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
-  .brand .tag{background:var(--navy);color:#fff;font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:600;padding:4px 8px;border-radius:6px;letter-spacing:.06em}
-  @media (prefers-color-scheme: dark){ .brand .tag{background:var(--teal);color:#081511} }
-  .navlinks{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;align-items:center}
-  .navlinks a{color:var(--ink-2);text-decoration:none;font-size:.92rem;font-weight:500;padding:7px 10px;border-radius:8px}
-  .navlinks a:hover{background:var(--surface-2);color:var(--ink)}
-  .navlinks a.active{background:var(--navy);color:#fff}
-  @media (prefers-color-scheme: dark){ .navlinks a.active{background:var(--teal);color:#081511} }
-  .navlinks a.cta{background:var(--amber);color:#1a1405;font-weight:700}
-  .navlinks a.cta:hover{background:var(--amber);color:#1a1405}
+  /* Barra superior — como el PDF: azul marino, botón activo azul claro */
+  .topnav{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:3px solid var(--blue-light)}
+  .topnav-inner{display:flex;align-items:center;gap:16px;padding:10px 0;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+  .brand .logo-itson{font-family:"Archivo",sans-serif;font-weight:900;font-size:1.35rem;letter-spacing:-.02em;color:#fff}
+  .brand .logo-itson span{color:var(--blue-light)}
+  .brand .logo-isw{font-family:"Archivo",sans-serif;font-weight:800;font-size:.95rem;color:var(--blue-light);line-height:1.1}
+  .brand .logo-isw small{display:block;font-family:"IBM Plex Sans",sans-serif;font-weight:500;font-size:.68rem;color:#cfe3f2}
+  .navlinks{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .navlinks a{color:#fff;text-decoration:none;font-size:.95rem;font-weight:500;padding:8px 13px;border-radius:999px}
+  .navlinks a:hover{background:rgba(255,255,255,.14)}
+  .navlinks a.active{background:var(--blue-light);color:var(--navy);font-weight:700;border-bottom:3px solid #fff;border-radius:999px 999px 6px 6px}
+  .navlinks a.aspirantes{background:var(--sky);color:var(--navy);font-weight:700}
+  .navlinks .search{font-size:1.15rem;padding:6px 8px}
 
-  /* Hero */
-  .hero{padding:44px 0 10px;scroll-margin-top:76px}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
-  .kicker{font-family:"IBM Plex Mono",monospace;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);font-weight:600;margin:0 0 14px}
-  h1{font-family:"Archivo",sans-serif;font-weight:900;letter-spacing:-.03em;line-height:.98;font-size:clamp(2.4rem,5.4vw,4rem);margin:0 0 18px}
-  h1 .accent{color:var(--teal)}
-  .lead{font-size:1.13rem;color:var(--ink-2);margin:0 0 22px;max-width:34em}
-  .lead strong{color:var(--ink)}
-  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
-  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:.98rem;padding:12px 18px;border-radius:10px;border:1px solid transparent}
-  .btn-primary{background:var(--navy);color:#fff}
-  @media (prefers-color-scheme: dark){ .btn-primary{background:var(--teal);color:#081511} }
-  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-  .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:520px}
-  .fact{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-  .fact b{display:block;font-family:"Archivo",sans-serif;font-size:1.05rem}
-  .fact span{font-size:.85rem;color:var(--ink-2)}
-  .hero-photo{position:relative}
-  .hero-photo img{width:100%;height:100%;min-height:340px;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
-  .hero-photo figcaption{position:absolute;left:14px;bottom:14px;right:14px;background:rgba(7,20,36,.82);color:#eaf2ff;border-radius:10px;padding:10px 14px;font-size:.86rem}
-  .hero-photo figcaption b{color:#fff}
+  /* Hero — fondo azul marino con código, como el PDF */
+  .hero{background:var(--navy);color:#fff;padding:48px 0 52px;scroll-margin-top:72px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:url("assets/fondo-codigo.jpg") center/cover;opacity:.22}
+  .hero .wrap{position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+  .hero h1{font-family:"Archivo",sans-serif;font-weight:900;color:#fff;font-size:clamp(2.4rem,5.4vw,3.9rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 18px;text-transform:uppercase}
+  .hero p.lead{color:#e8f1fb;font-size:1.18rem;max-width:34em}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:1rem;padding:13px 22px;border-radius:999px;border:2px solid transparent}
+  .btn-blue{background:var(--blue-light);color:var(--navy)}
+  .btn-outline{background:transparent;color:#fff;border-color:var(--blue-light)}
+  .hero-photo{border:8px solid #fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+  .hero-photo img{width:100%;height:100%;min-height:300px;object-fit:cover}
 
-  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
-  .card h3{font-family:"Archivo",sans-serif;font-size:1.18rem;margin:0 0 10px}
-  .card p{color:var(--ink-2);margin:0 0 12px}
-  .card p:last-child{margin-bottom:0}
-  .quote{border-left:4px solid var(--amber);background:var(--amber-soft);border-radius:0 12px 12px 0;padding:18px 20px;margin:0}
-  .quote p{margin:0;font-size:1.02rem}
-  .quote footer{margin-top:10px;font-size:.85rem;color:var(--ink-2);font-family:"IBM Plex Mono",monospace}
-  ul.check{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-  ul.check li{display:flex;gap:11px;align-items:flex-start;color:var(--ink-2)}
-  ul.check li b{color:var(--ink)}
-  .check-ic{flex:0 0 auto;width:22px;height:22px;border-radius:6px;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center;font-size:.8rem;font-weight:700;margin-top:2px}
-  .note{margin-top:16px;font-size:.92rem;color:var(--ink-2);background:var(--surface-2);border-radius:10px;padding:14px 16px}
-  .chips{display:flex;gap:8px;flex-wrap:wrap}
-  .chip{font-family:"IBM Plex Mono",monospace;font-size:.78rem;background:var(--surface-2);border:1px solid var(--line);padding:5px 10px;border-radius:999px;color:var(--ink)}
+  /* Tarjetas blancas con sombra, como el PDF */
+  .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+  .card h3{font-size:1.25rem}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .icon-circle{width:58px;height:58px;border-radius:50%;background:var(--blue-light);display:grid;place-items:center;font-size:1.7rem;margin-bottom:12px}
+  .sec-title{font-family:"Archivo",sans-serif;color:var(--navy);font-weight:800;font-size:clamp(1.5rem,3vw,2rem);margin:0 0 22px}
+  .sec-title.center{text-align:center}
 
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .job{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-  .job h3{font-family:"Archivo",sans-serif;margin:0 0 8px;font-size:1.08rem}
-  .job p{color:var(--ink-2);margin:0;font-size:.96rem}
-  .split-img{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch;margin-top:22px}
-  .split-img img{width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:var(--radius)}
-  .split-img .card{display:flex;flex-direction:column;justify-content:center}
+  /* Franja azul marino con 2 tarjetas blancas */
+  .blue-strip{background:var(--navy);padding:44px 0;margin-top:48px}
+  .blue-strip .card{display:flex;gap:18px;align-items:flex-start}
+  .blue-strip .card .laptop{font-size:3rem;line-height:1}
+  .blue-strip h3{font-size:1.45rem;text-transform:uppercase}
 
-  .steps{list-style:none;margin:0;padding:0;display:grid;gap:0}
-  .steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
-  .steps li:last-child{border-bottom:none}
-  .step-n{width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-family:"IBM Plex Mono",monospace;font-weight:600;display:grid;place-items:center;font-size:.95rem}
-  @media (prefers-color-scheme: dark){ .step-n{background:var(--teal);color:#081511} }
-  .steps h3{margin:2px 0 6px;font-size:1.05rem;font-family:"Archivo",sans-serif}
-  .steps p{margin:0;color:var(--ink-2);font-size:.97rem}
+  /* Contacto fijo del PDF, al final de cada página */
+  .contact-bar{background:var(--navy);color:#fff;padding:26px 0}
+  .contact-bar .wrap{display:flex;gap:24px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+  .contact-bar a{color:#fff}
+  .contact-bar .resp{display:flex;gap:14px;align-items:center}
+  .contact-bar .resp .env{font-size:2.4rem}
+  .contact-bar .resp b{display:block;font-family:"Archivo",sans-serif;font-size:1.05rem}
+  .contact-bar .phones{text-align:right;font-size:1rem}
+  @media (max-width:700px){ .contact-bar .phones{text-align:left} }
 
-  /* Formulario de solicitud */
-  .form-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
-  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .field{display:grid;gap:6px}
-  .field.full{grid-column:1 / -1}
-  .field label{font-weight:600;font-size:.95rem}
-  .field input,.field select,.field textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
-  .field textarea{min-height:110px;resize:vertical}
-  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--teal);outline-offset:1px}
-  .form-note{font-size:.9rem;color:var(--ink-2);margin:14px 0 0}
-  .form-status{display:none;margin-top:16px;background:var(--teal-soft);border-radius:10px;padding:14px 16px;font-size:.95rem}
+  /* Mapa curricular */
+  .mapa{border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;background:#fff}
+  .mapa img{width:100%}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:.9rem;color:var(--ink-2)}
+  .legend span{display:inline-flex;gap:7px;align-items:center}
+  .sw{width:18px;height:18px;border-radius:4px;display:inline-block}
+  .sw-gray{background:#c9c9c9}.sw-cyan{background:#19b8d6}.sw-green{background:#3bb54a}.sw-red{background:#e30613}.sw-dgreen{background:#0a8a2f}.sw-yellow{background:#ffe600}.sw-orange{background:#f47a3c}.sw-blue{background:#5b7ec4}
+
+  /* Perfiles */
+  .perfiles-head{background:url("assets/fondo-codigo.jpg") center/cover;padding:56px 0;text-align:center;position:relative}
+  .perfiles-head::before{content:"";position:absolute;inset:0;background:rgba(10,31,92,.55)}
+  .perfiles-head h2{position:relative;color:#fff;font-size:clamp(2rem,4.5vw,3rem);text-transform:uppercase;margin:0}
+  .perfil-card{display:grid;grid-template-columns:1fr 1fr;overflow:hidden;padding:0}
+  .perfil-card .txt{padding:28px}
+  .perfil-card img{width:100%;height:100%;object-fit:cover;min-height:300px}
+  ul.check{list-style:none;margin:0;padding:0;display:grid;gap:12px;color:var(--ink-2)}
+  ul.check li{display:flex;gap:10px}
+  .check-ic{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:.8rem;font-weight:700;margin-top:2px}
+  .comp-box{border:3px solid var(--blue);border-radius:16px;overflow:hidden;background:#fff}
+  .comp-box header{background:var(--blue);color:#fff;text-align:center;padding:14px;font-family:"Archivo",sans-serif;font-weight:800;font-size:1.25rem;text-transform:uppercase}
+  .comp-box.light{border-color:var(--blue-light)}
+  .comp-box.light header{background:var(--blue-light);color:var(--navy)}
+  .comp-box ul{margin:0;padding:20px 22px 20px 38px;display:grid;gap:12px;color:var(--ink-2)}
+  .cert{max-width:560px;margin:0 auto}
+  .cert header{background:var(--blue-light);color:#fff;text-align:center;padding:12px;font-family:"Archivo",sans-serif;font-weight:800;font-size:1.3rem;text-transform:uppercase;border-radius:14px 14px 0 0}
+  .cert .body{border:3px solid var(--blue-light);border-top:none;border-radius:0 0 14px 14px;padding:18px;text-align:center}
+
+  /* Campo laboral */
+  .campo-banner{position:relative;border-radius:var(--radius);overflow:hidden;min-height:220px;display:flex;align-items:center}
+  .campo-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .campo-banner h2{position:relative;color:#111827;background:rgba(255,255,255,.55);padding:12px 18px;border-radius:12px;margin:20px;max-width:640px}
+
+  /* Formulario — panel azul claro, como el PDF */
+  .form-panel{background:var(--sky-soft);border-radius:22px;padding:34px;box-shadow:var(--shadow)}
+  .form-panel h2{margin-bottom:18px}
+  .form-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  .field input,.field select,.field textarea{font:inherit;color:var(--ink);background:#fff;border:2px solid #8a9bb0;border-radius:999px;padding:14px 20px;width:100%}
+  .field textarea{border-radius:20px;min-height:90px;resize:vertical}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:3px solid var(--blue-light)}
+  .field input::placeholder,.field textarea::placeholder{color:#9aa3ad}
+  .submit-row{text-align:center;margin-top:20px}
+  .submit-row .btn{border:none;cursor:pointer;background:var(--blue-light);color:#fff;font-size:1.05rem;padding:13px 34px;letter-spacing:.04em}
+  .form-note{font-size:.9rem;color:var(--ink-2);margin:14px 0 0;text-align:center}
+  .form-status{display:none;margin-top:16px;background:#fff;border-radius:12px;padding:14px 16px;font-size:.95rem;text-align:center}
   .form-status.show{display:block}
-  .form-status button{margin-top:10px}
 
-  .links-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
-  .link-card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--ink)}
-  .link-card b{display:block;font-family:"Archivo",sans-serif}
-  .link-card span{font-size:.88rem;color:var(--ink-2)}
-  .link-card:hover{border-color:var(--teal)}
+  /* Datos institucionales — panel azul claro */
+  .links-panel{background:var(--sky-soft);border-radius:22px;padding:34px;box-shadow:var(--shadow);margin-top:28px}
+  .links-panel h2{margin-bottom:22px}
+  .links-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .link-item{display:flex;gap:16px;align-items:center;text-decoration:none;color:var(--ink)}
+  .link-item .ic{font-size:2.6rem;line-height:1}
+  .link-item b{font-weight:600}
+  .link-item u{text-decoration-color:var(--blue)}
 
-  footer.site{margin-top:64px;border-top:1px solid var(--line);padding:30px 0 44px}
-  footer.site .fine{color:var(--ink-2);font-size:.86rem;max-width:70ch}
+  /* Chat flotante del PDF */
+  .chat-fab{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:10px;text-decoration:none}
+  .chat-fab .bubble{background:var(--blue-light);color:#fff;border-radius:16px 16px 4px 16px;padding:10px 14px;font-weight:600;font-size:.92rem;box-shadow:var(--shadow)}
+  .chat-fab .robot{width:64px;height:64px;border-radius:50%;background:var(--blue-light);display:grid;place-items:center;font-size:2.1rem;box-shadow:var(--shadow);border:3px solid #fff}
+
+  footer.site{background:var(--navy);color:#fff;padding:22px 0 30px}
+  footer.site .fine{color:#cfe3f2;font-size:.86rem;max-width:70ch;margin:18px 0 0}
 
   @media (max-width:900px){
-    .hero-grid,.two-col,.split-img{grid-template-columns:1fr}
+    .hero-grid,.grid2,.perfil-card{grid-template-columns:1fr}
     .grid3{grid-template-columns:1fr 1fr}
-    .hero-photo img{min-height:240px}
+    .perfil-card img{min-height:220px}
   }
   @media (max-width:600px){
-    .grid3,.form-grid,.links-grid{grid-template-columns:1fr}
-    .facts{grid-template-columns:1fr 1fr}
-    body{font-size:16px}
-    section{padding:40px 0 4px}
+    .grid3,.links-grid{grid-template-columns:1fr}
+    .hero-photo img{min-height:220px}
+    section{padding:40px 0 12px}
   }
   @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
 </style>
@@ -143,267 +162,232 @@
 
 <nav class="topnav" aria-label="Navegación principal">
   <div class="wrap topnav-inner">
-    <a class="brand" href="#inicio"><span class="tag">ISW · ITSON</span> Ingeniería en Software</a>
+    <a class="brand" href="#inicio"><span class="logo-itson">ITSON<span>.</span></span><span class="logo-isw">ISW<small>Ingeniero en Software</small></span></a>
     <div class="navlinks">
       <a href="#inicio" data-nav="inicio" class="active">Inicio</a>
       <a href="#carrera" data-nav="carrera">La carrera</a>
       <a href="#perfiles" data-nav="perfiles">Perfiles</a>
       <a href="#empleo" data-nav="empleo">Campo laboral</a>
       <a href="#contacto" data-nav="contacto">Contacto</a>
-      <a href="#contacto" class="cta">Aspirantes</a>
+      <span class="search" aria-hidden="true">🔍</span>
+      <a href="#contacto" class="aspirantes">“Aspirantes” ITSON buzón</a>
     </div>
   </div>
 </nav>
 
-<!-- INICIO — diapositiva 1 del PDF -->
+<!-- INICIO — página 1 del PDF -->
 <header class="hero" id="inicio">
   <div class="wrap hero-grid">
     <div>
-      <p class="kicker">Plan de Estudios 2023 · Departamento de Computación y Diseño</p>
-      <h1>Ingeniería en <span class="accent">Software</span> ITSON</h1>
-      <p class="lead"><strong>¡Diseña el futuro!</strong> Crea soluciones tecnológicas de impacto global. Únete a la comunidad ITSON.</p>
-      <p class="lead">Formamos profesionistas íntegros, innovadores y emprendedores para el mercado internacional.</p>
+      <h1>Ingenieria en Software ITSON</h1>
+      <p class="lead">¡Diseña el futuro! Crea soluciones tecnologicas de impacto global. Únete a la comunidad ITSON.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#carrera">Descubre la carrera</a>
-        <a class="btn btn-ghost" href="#contacto">Solicita información</a>
-      </div>
-      <div class="facts">
-        <div class="fact"><b>Plan 2023</b><span>Actualizado, basado en competencias</span></div>
-        <div class="fact"><b>La IA y tú</b><span>Tecnologías emergentes e IA en tu formación</span></div>
-        <div class="fact"><b>Inglés B1+</b><span>492–519 puntos TOEFL ITP (MCER)</span></div>
-        <div class="fact"><b>3 unidades</b><span>Obregón · Guaymas · Navojoa</span></div>
+        <a class="btn btn-blue" href="#carrera">Descubre la carrera.</a>
+        <a class="btn btn-outline" href="#contacto">Solicita información.</a>
       </div>
     </div>
-    <figure class="hero-photo" style="margin:0">
-      <img src="assets/hero-itson.webp" alt="Edificio de Rectoría del ITSON en Ciudad Obregón, con estudiantes caminando por la explanada del campus" />
-      <figcaption><b>Campus Náinari, Ciudad Obregón.</b> “Educar para trascender”.</figcaption>
-    </figure>
+    <div class="hero-photo"><img src="assets/foto-hero.jpg" alt="Personas trabajando en una laptop con una hoja de cálculo" /></div>
   </div>
 </header>
 
-<!-- ¿QUÉ HACE UN INGENIERO EN SOFTWARE? -->
 <section id="que-hace">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">INICIO — ¿QUÉ HACE UN INGENIERO EN SOFTWARE?</span>
-      <h2>Etapas del software. Áreas y entornos. Formación integral.</h2>
-    </div>
+    <h2 class="sec-title">¿Qué hace un Ingeniero en Software?</h2>
     <div class="grid3">
-      <article class="job"><h3>Trabaja en todo el ciclo</h3><p>Desde la definición de requisitos y el análisis, hasta el diseño, construcción, pruebas y la administración de proyectos.</p></article>
-      <article class="job"><h3>Se desempeña en empresas</h3><p>En empresas de desarrollo de software, en organizaciones públicas y privadas, o en proyectos independientes.</p></article>
-      <article class="job"><h3>Prepárate con un plan actual</h3><p>Domina tecnologías emergentes, inteligencia artificial y acredita el nivel de inglés B1+.</p></article>
+      <article class="card"><div class="icon-circle">💻</div><h3>Etapas del Software.</h3><p>Trabaja en todo el ciclo: desde la definición de requisitos y el análisis, hasta el diseño, construcción, pruebas y la administración de proyectos.</p></article>
+      <article class="card"><div class="icon-circle">💻</div><h3>Áreas y entornos.</h3><p>Se desempeña en empresas de desarrollo de software, áreas de Ti en todo tipo de industrias, organizaciones públicas y privadas, o proyectos independientes.</p></article>
+      <article class="card"><div class="icon-circle">💻</div><h3>Formación integral.</h3><p>Prepárate con el Plan 2023, dominando tecnologías emergentes, inteligencia artificial y acreditando el nivel de inglés.</p></article>
     </div>
-    <p class="note"><b>¿Dudas? Chatea con nosotros:</b> teléfono <a href="tel:+526444109001">+52 (644) 410-90-01, ext. 1531</a> · WhatsApp (únicamente mensajes de texto): <a href="https://wa.me/526442308643?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Ingenier%C3%ADa%20en%20Software%20del%20ITSON" target="_blank" rel="noopener">+52 (644) 230 8643</a></p>
+  </div>
+  <div class="blue-strip">
+    <div class="wrap grid2">
+      <article class="card"><span class="laptop">💻</span><div><h3>Plan de Estudio 2023</h3><p>Plan actualizado, basado en competencias<br>MCER B1+</p></div></article>
+      <article class="card"><span class="laptop">💻</span><div><h3>La IA y tú</h3><p>Incorpora tecnologías emergentes e IA en tu formación.</p></div></article>
+    </div>
   </div>
 </section>
 
-<!-- LA CARRERA / MAPA CURRICULAR — diapositiva 2 del PDF -->
+<div class="contact-bar">
+  <div class="wrap">
+    <div class="resp"><span class="env">✉️</span><div><b>Responsable de programa</b><a href="mailto:isw-obregon@itson.edu.mx">isw-obregon@itson.edu.mx</a> | <a href="mailto:martha.larrinaga@itson.edu.mx">martha.larrinaga@itson.edu.mx</a></div></div>
+    <div class="phones">Teléfono: <a href="tel:+526444109001">+52 (644) 410-90-01, Ext. 1531</a><br>WhatsApp (Únicamente mensajes de texto): <a href="https://wa.me/526442308643?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Ingenier%C3%ADa%20en%20Software%20del%20ITSON" target="_blank" rel="noopener">+52 (644) 230 8643</a> 📞</div>
+  </div>
+</div>
+
+<!-- LA CARRERA — página 2 del PDF -->
 <section id="carrera">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">LA CARRERA — MAPA CURRICULAR · PLAN 2023</span>
-      <h2>¡Construye el futuro digital!</h2>
-      <p>Departamento de Computación y Diseño, Plan de Estudios 2023: innovador, para innovadores y emprendedores, para el mercado internacional.</p>
-    </div>
-    <div class="two-col">
-      <blockquote class="quote">
-        <p>“Formar profesionistas íntegros, comprometidos con su labor, innovadores, emprendedores y capaces de idear, diseñar, construir y gestionar eficientemente software competitivo para el mercado internacional, que contribuyan al crecimiento y progreso de la sociedad.”</p>
-        <footer>— Objetivo oficial del programa, ITSON</footer>
-      </blockquote>
-      <div class="card">
-        <h3>Responsable de programa — Obregón</h3>
-        <p><b>Mtra. Martha Eloisa Larrínaga Hernández</b><br>
-        <a href="mailto:isw-obregon@itson.edu.mx">isw-obregon@itson.edu.mx</a> · <a href="mailto:martha.larrinaga@itson.edu.mx">martha.larrinaga@itson.edu.mx</a><br>
-        Teléfono: <a href="tel:+526444109001">+52 (644) 410-90-01, ext. 1531</a></p>
-        <p>También se imparte en Guaymas y Navojoa. Los contactos por unidad están en la sección de Perfiles y en el formulario de contacto.</p>
-      </div>
+    <h2>Ingeniería en Software.<br>¡Construye el Futuro Digital!</h2>
+    <p style="font-size:1.15rem">Formamos profesionistas íntegros, innovadores y emprendedores para el mercado internacional.</p>
+    <div class="grid2" style="margin-top:24px">
+      <article class="card"><h3>Departamento de Computación y Diseño.</h3><p>Departamento de Computación y Diseño, para innovadores y emprendedores para el mercado internacional.</p></article>
+      <article class="card"><h3>Plan de Estudios 2023</h3><p>Plan de Estudios 2023, innovador y emprendedores para el mercado internacional.</p></article>
     </div>
 
-    <div style="height:28px"></div>
-    <div class="two-col">
-      <div class="card">
-        <h3>Requisitos de admisión</h3>
-        <ol class="steps">
-          <li><span class="step-n">1</span><div><h3>Resultado de admisión</h3><p>Consulta tu resultado en el portal de admisiones.</p></div></li>
-          <li><span class="step-n">2</span><div><h3>Pago de solicitud</h3><p>Cubre la cuota de solicitud en las fechas indicadas.</p></div></li>
-          <li><span class="step-n">3</span><div><h3>Entrega constancia con promedio</h3><p>Entrega tu constancia de preparatoria con promedio.</p></div></li>
-          <li><span class="step-n">4</span><div><h3>Consulta el resultado</h3><p>Revisa el resultado de tu solicitud.</p></div></li>
-          <li><span class="step-n">5</span><div><h3>Consulta la información de inscripción de clases</h3><p>Revisa horarios, grupos y materias disponibles.</p></div></li>
-          <li><span class="step-n">6</span><div><h3>¡Inscríbete!</h3><p>Completa tu inscripción en línea.</p></div></li>
-          <li><span class="step-n">7</span><div><h3>Bienvenido</h3><p>Bienvenido a la comunidad ITSON.</p></div></li>
-        </ol>
-      </div>
-      <div class="card">
-        <h3>Requisitos de titulación</h3>
-        <ol class="steps">
-          <li><span class="step-n">1</span><div><h3>Datos generales</h3><p>Registra tus datos generales para el trámite.</p></div></li>
-          <li><span class="step-n">2</span><div><h3>Solicitud</h3><p>Llena la solicitud de titulación.</p></div></li>
-          <li><span class="step-n">3</span><div><h3>Pago de solicitud</h3><p>Cubre la cuota correspondiente.</p></div></li>
-          <li><span class="step-n">4</span><div><h3>Resultado de auditoría</h3><p>Consulta el resultado de la auditoría de tu expediente.</p></div></li>
-          <li><span class="step-n">5</span><div><h3>Consulta el resultado</h3><p>Revisa el resultado de tu solicitud de titulación.</p></div></li>
-          <li><span class="step-n">6</span><div><h3>Estado de título y retirar título</h3><p>Consulta el estado de tu título y retíralo cuando esté listo.</p></div></li>
-        </ol>
-        <p class="note">Los pasos y requisitos exactos se confirman en los canales oficiales del ITSON, porque pueden cambiar por ciclo.</p>
-      </div>
+    <h2 class="sec-title center" style="margin-top:44px">Mapa curricular - Plan 2023</h2>
+    <div class="mapa"><img src="assets/mapa-curricular.png" alt="Mapa curricular de Ingeniería en Software, Plan 2023, con los 8 semestres y los bloques del programa" /></div>
+    <div class="legend">
+      <span><i class="sw sw-gray"></i>Ciencias básicas</span>
+      <span><i class="sw sw-cyan"></i>Formación general</span>
+      <span><i class="sw sw-green"></i>Práctica profesional</span>
+      <span><i class="sw sw-red"></i>Inglés universitario</span>
+      <span><i class="sw sw-dgreen"></i>Optativa disciplinar</span>
+      <span><i class="sw sw-yellow"></i>Administración de proyectos</span>
+      <span><i class="sw sw-orange"></i>Diseño</span>
+      <span><i class="sw sw-blue"></i>Construcción</span>
     </div>
+    <p style="margin-top:14px"><b>Requisitos de titulación:</b> Tutorías: llevar 2 cursos iniciales · Vida saludable: 60 puntos · Desarrollo intercultural: 45 puntos · Inglés universitario: acreditar el nivel de su PE · Servicio social: 500 hrs · Acreditar el 100% del Plan de Estudios.</p>
 
-    <div class="split-img">
-      <img src="assets/lab.jpg" alt="Estudiantes de computación trabajando en equipo frente a computadoras con código en pantalla en un laboratorio universitario" />
-      <div class="card">
-        <h3>Aprender haciendo, en equipo</h3>
-        <p>Gran parte del trabajo es colaborativo: analizar un problema, repartir tareas, revisar el código de otros y defender tus decisiones de diseño.</p>
-        <p>El plan 2023 incorpora tecnologías emergentes e inteligencia artificial en tu formación, con un modelo basado en competencias.</p>
-      </div>
+    <div class="grid2" style="margin-top:28px">
+      <article class="card"><h3 style="border-bottom:3px solid var(--blue-light);padding-bottom:8px">Requisitos de admisión.</h3>
+        <ol style="margin:12px 0 0;padding-left:22px;color:var(--ink-2);display:grid;gap:6px">
+          <li>Resultado de admisión.</li><li>Pago de solicitud.</li><li>Entrega constancia con promedio.</li><li>Consulta el resultado.</li><li>Consulta la información para inscripción de clases.</li><li>¡Inscribete!</li><li>Bienvenido.</li>
+        </ol></article>
+      <article class="card"><h3 style="border-bottom:3px solid var(--blue-light);padding-bottom:8px">Requisitos de titulación.</h3>
+        <ol style="margin:12px 0 0;padding-left:22px;color:var(--ink-2);display:grid;gap:6px">
+          <li>Datos generales.</li><li>Solicitud.</li><li>Pago de solicitud.</li><li>Resultado de auditoría.</li><li>Consulta el resultado.</li><li>Estado de título.</li><li>Retirar título.</li>
+        </ol></article>
     </div>
   </div>
 </section>
 
-<!-- PERFILES — diapositiva 3 del PDF -->
-<section id="perfiles">
+<div class="contact-bar">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">PERFILES DE INGRESO Y EGRESO</span>
-      <h2>¿Eres un aspirante ideal? ¿Qué sabrás al egresar?</h2>
-    </div>
-    <div class="two-col">
-      <div class="card">
-        <h3>Perfil de ingreso — Aspirantes ideales</h3>
+    <div class="resp"><span class="env">✉️</span><div><b>Responsable de programa</b><a href="mailto:isw-obregon@itson.edu.mx">isw-obregon@itson.edu.mx</a> | <a href="mailto:martha.larrinaga@itson.edu.mx">martha.larrinaga@itson.edu.mx</a></div></div>
+    <div class="phones">Teléfono: <a href="tel:+526444109001">+52 (644) 410-90-01, Ext. 1531</a><br>WhatsApp (Únicamente mensajes de texto): <a href="https://wa.me/526442308643" target="_blank" rel="noopener">+52 (644) 230 8643</a> 📞</div>
+  </div>
+</div>
+
+<!-- PERFILES — página 3 del PDF -->
+<div class="perfiles-head" id="perfiles">
+  <h2>Perfiles de ingreso y egreso</h2>
+</div>
+<section style="padding-top:32px">
+  <div class="wrap">
+    <div class="card perfil-card">
+      <div class="txt">
+        <h3 style="font-size:1.5rem">Perfil de ingreso.</h3>
+        <p><b>ASPIRANTES IDEALES:</b></p>
         <ul class="check">
-          <li><span class="check-ic">✓</span><span><b>Interés genuino</b> en la tecnología y el desarrollo de software.</span></li>
-          <li><span class="check-ic">✓</span><span><b>Aptitudes para la lógica,</b> el razonamiento abstracto y la resolución de problemas.</span></li>
-          <li><span class="check-ic">✓</span><span><b>Capacidad de autoaprendizaje</b> y trabajo colaborativo.</span></li>
-          <li><span class="check-ic">✓</span><span><b>Iniciativa y creatividad</b> para innovar.</span></li>
-          <li><span class="check-ic">✓</span><span><b>Conocimientos básicos</b> de computación y matemáticas.</span></li>
+          <li><span class="check-ic">✓</span><span>Interés genuino en la tecnología y el desarrollo de software.</span></li>
+          <li><span class="check-ic">✓</span><span>Aptitudes para la lógica, el razonamiento abstracto y la resolución de problemas.</span></li>
+          <li><span class="check-ic">✓</span><span>Capacidad de autoaprendizaje y trabajo colaborativo</span></li>
+          <li><span class="check-ic">✓</span><span>Iniciativa y creatividad para innovar</span></li>
+          <li><span class="check-ic">✓</span><span>Conocimientos básicos de computación y matemáticas</span></li>
         </ul>
-        <p>No necesitas saber programar desde la prepa: la carrera arranca con fundamentos como algoritmos computacionales.</p>
       </div>
-      <div class="card">
-        <h3>Perfil de egreso</h3>
-        <p>Al graduarte, serás un profesionista <b>socialmente comprometido, íntegro, innovador y emprendedor</b>, capaz de desarrollar software aplicando procesos, modelos y estándares de calidad internacional.</p>
-        <p><b>Certificación de idiomas:</b> inglés B1+ (492–519 TOEFL ITP).</p>
-      </div>
+      <img src="assets/foto-perfiles.jpg" alt="Estudiantes de software trabajando juntos frente a una pantalla con código" />
     </div>
 
-    <div style="height:22px"></div>
-    <div class="sec-head"><h2 style="font-size:1.4rem">Competencias del Ingeniero en Software ITSON</h2></div>
-    <div class="grid3">
-      <article class="job"><h3>Competencias específicas</h3><p><b>Diseñar</b> software aplicando metodologías y estándares.<br><b>Construir</b> software de calidad y seguro.<br><b>Administrar</b> proyectos de desarrollo.</p></article>
-      <article class="job"><h3>Competencias de sello</h3><p>Trabajo en equipo y comunicación efectiva.<br>Integridad y ciudadanía responsable.<br>Sustentabilidad, compromiso social y cultura de la legalidad.<br>Emprendimiento y resolución de problemas.</p></article>
-      <article class="job"><h3>Competencias de impregnación</h3><p>Gestión socioemocional.<br>Aprendizaje autónomo.<br>Compromiso social y ciudadanía responsable.</p></article>
+    <h2 class="sec-title center" style="margin-top:48px">PERFIL EGRESO</h2>
+    <p style="text-align:center;font-weight:700;font-size:1.15rem;color:var(--ink)">COMPETENCIAS DEL INGENIERO EN SOFTWARE ITSON.</p>
+    <div class="grid3" style="margin-top:22px">
+      <article class="comp-box"><header>Competencias específicas</header><ul><li>Diseñar software aplicando metodologías y estándares.</li><li>Construir software de calidad y seguro.</li><li>Administrar proyectos de desarrollo.</li></ul></article>
+      <article class="comp-box light"><header>Competencias sello</header><ul><li>Integridad y ciudadanía responsable.</li><li>Emprendimiento y resolución de problemas.</li><li>Gestión socioemocional.</li></ul></article>
+      <article class="comp-box"><header>Competencias de impregnación</header><ul><li>Trabajo en equipo y comunicación efectiva.</li><li>Sustentabilidad, compromiso social y cultura de la legalidad.</li></ul></article>
     </div>
-    <p class="note"><b>Campus:</b> Obregón — Mtra. Martha Eloisa Larrínaga Hernández, <a href="mailto:isw-obregon@itson.edu.mx">isw-obregon@itson.edu.mx</a> · Guaymas — Mtro. Ricardo Daniel Carrasco Correa, <a href="mailto:isw-guaymas@itson.edu.mx">isw-guaymas@itson.edu.mx</a>, +52 (622) 221-00-32/33 ext. 6074 · Navojoa — Mtro. José de Jesús Soto Padilla, <a href="mailto:isw-navojoa@itson.edu.mx">isw-navojoa@itson.edu.mx</a>, +52 (642) 422-59-29 ext. 5119</p>
+
+    <div class="cert" style="margin-top:28px">
+      <header>Certificación de idiomas</header>
+      <div class="body"><b>Inglés B1+ (492-519 TOEFL ITP)</b><br><span style="color:var(--ink-2);font-size:.9rem">En el PDF aparece como “TOELF ITP”; el nombre correcto es TOEFL ITP.</span></div>
+    </div>
+    <p style="margin-top:18px;text-align:center;color:var(--ink-2)"><b>Campus:</b> Obregón — Mtra. Martha Eloisa Larrínaga Hernández · Guaymas — Mtro. Ricardo Daniel Carrasco Correa, <a href="mailto:isw-guaymas@itson.edu.mx">isw-guaymas@itson.edu.mx</a> · Navojoa — Mtro. José de Jesús Soto Padilla, <a href="mailto:isw-navojoa@itson.edu.mx">isw-navojoa@itson.edu.mx</a></p>
   </div>
 </section>
 
-<!-- CAMPO LABORAL — diapositiva 4 del PDF -->
+<div class="contact-bar">
+  <div class="wrap">
+    <div class="resp"><span class="env">✉️</span><div><b>Responsable de programa</b><a href="mailto:isw-obregon@itson.edu.mx">isw-obregon@itson.edu.mx</a> | <a href="mailto:martha.larrinaga@itson.edu.mx">martha.larrinaga@itson.edu.mx</a></div></div>
+    <div class="phones">Teléfono: <a href="tel:+526444109001">+52 (644) 410-90-01, Ext. 1531</a><br>WhatsApp (Únicamente mensajes de texto): <a href="https://wa.me/526442308643" target="_blank" rel="noopener">+52 (644) 230 8643</a> 📞</div>
+  </div>
+</div>
+
+<!-- CAMPO LABORAL — página 4 del PDF -->
 <section id="empleo">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">CAMPO LABORAL — TU FUTURO EN LA INGENIERÍA EN SOFTWARE</span>
-      <h2>Explora las áreas clave</h2>
-      <p>Define y analiza las necesidades del usuario y del sistema, crea la arquitectura y diseña aplicaciones, desarrolla y programa soluciones, y verifica la calidad, funcionalidad y seguridad del producto.</p>
-    </div>
+    <div class="campo-banner"><img src="assets/banner-campo.jpg" alt="Ciudad digital con edificios y redes de tecnología" /><h2>CAMPO LABORAL: Tu futuro en la Ingeniería en Software</h2></div>
+    <h2 class="sec-title" style="margin-top:36px">Explora las Áreas Clave de la Ingeniería en Software.</h2>
     <div class="grid3">
-      <article class="job"><h3>Ingeniería de requisitos</h3><p>Define y analiza las necesidades del usuario y del sistema.</p></article>
-      <article class="job"><h3>Análisis de software</h3><p>Analiza sistemas y procesos para optimizar el rendimiento.</p></article>
-      <article class="job"><h3>Diseño de software</h3><p>Crea y diseña la arquitectura de aplicaciones.</p></article>
-      <article class="job"><h3>Pruebas de software</h3><p>Verifica la calidad, funcionalidad y seguridad del producto.</p></article>
-      <article class="job"><h3>Construcción de software</h3><p>Desarrolla y programa soluciones utilizando diversos lenguajes.</p></article>
-      <article class="job"><h3>Administración de proyectos</h3><p>Administra proyectos de desarrollo de software, equipo, tiempos y entrega.</p></article>
+      <article class="card"><div class="icon-circle">💻</div><h3>Ingenieria de requisitos.</h3><p>Define y analiza las necesidades del usuario y del sistema.</p><h3 style="margin-top:16px">Pruebas de software.</h3><p>Verifica la calidad, funcionalidad y seguridad del producto.</p></article>
+      <article class="card"><div class="icon-circle">💻</div><h3>Análisis de Software.</h3><p>Realiza sistemas y procesos para optimizar el rendimiento.</p><h3 style="margin-top:16px">Construcción de software.</h3><p>Desarrolla y programa soluciones utilizando diversos lenguajes.</p></article>
+      <article class="card"><div class="icon-circle">💻</div><h3>Diseño de Software.</h3><p>Crea y diseña la arquitectura de aplicaciones.</p><h3 style="margin-top:16px">Administración de proyecto de desarrollo.</h3><p>Administra proyectos de desarrollo de software.</p></article>
     </div>
-    <div style="height:22px"></div>
-    <div class="sec-head"><h2 style="font-size:1.4rem">¿Dónde podrás trabajar?</h2></div>
+
+    <h2 class="sec-title" style="margin-top:44px">¿Dónde podrás trabajar?</h2>
     <div class="grid3">
-      <article class="job"><h3>Empresas de desarrollo de software</h3><p>Empresas especializadas en crear productos a medida.</p></article>
-      <article class="job"><h3>Áreas de TI en empresas</h3><p>Departamentos de tecnología en cualquier industria, en organizaciones públicas y privadas.</p></article>
-      <article class="job"><h3>Freelance (ejercicio libre)</h3><p>Trabajo independiente y proyectos propios, incluso para clientes internacionales.</p></article>
-    </div>
-    <div class="split-img">
-      <div class="card">
-        <h3>Por qué hay demanda</h3>
-        <p>Cada vez más procesos — ventas, salud, educación, logística, gobierno — dependen de software. El enfoque del ITSON en estándares internacionales y en inglés B1+ apunta a que puedas competir por proyectos y empleos fuera de Sonora y de México, incluso trabajando de forma remota.</p>
-      </div>
-      <img src="assets/team.jpg" alt="Equipo de desarrollo de software revisando código juntos frente a varios monitores en una oficina" />
+      <article class="card"><div class="icon-circle">🏢</div><h3>Empresas de desarrollo de software.</h3><p>Empresas especializadas en crear productos a medida.</p></article>
+      <article class="card"><div class="icon-circle">🏢</div><h3>Áreas de TI en empresas.</h3><p>Departamentos internos de tecnología en cualquier instante.</p></article>
+      <article class="card"><div class="icon-circle">🏢</div><h3>Freelance (Ejercicio libre)</h3><p>Trabajo independiente y proyectos propios.</p></article>
     </div>
   </div>
 </section>
 
-<!-- CONTACTO / SOLICITUD — diapositiva 5 del PDF -->
+<div class="contact-bar">
+  <div class="wrap">
+    <div class="resp"><span class="env">✉️</span><div><b>Responsable de programa</b><a href="mailto:isw-obregon@itson.edu.mx">isw-obregon@itson.edu.mx</a> | <a href="mailto:martha.larrinaga@itson.edu.mx">martha.larrinaga@itson.edu.mx</a></div></div>
+    <div class="phones">Teléfono: <a href="tel:+526444109001">+52 (644) 410-90-01, Ext. 1531</a><br>WhatsApp (Únicamente mensajes de texto): <a href="https://wa.me/526442308643" target="_blank" rel="noopener">+52 (644) 230 8643</a> 📞</div>
+  </div>
+</div>
+
+<!-- CONTACTO — página 5 del PDF -->
 <section id="contacto">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="sec-num">CONTACTO — ASPIRANTES</span>
+    <div class="form-panel">
       <h2>¿Tienes dudas sobre la Ingeniería en Software? ¡Contáctanos!</h2>
-      <p>Llena esta solicitud y se abrirá tu app de correo con el mensaje listo para enviarlo al programa de Ingeniería en Software del ITSON. Es una solicitud real: llega como correo a <b>isw-obregon@itson.edu.mx</b>, con copia a la responsable de programa.</p>
+      <form id="solicitudForm" novalidate>
+        <div class="form-grid">
+          <div class="field"><input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="Nombre completo (texto corto)" required /></div>
+          <div class="field"><input id="f-correo" name="correo" type="email" autocomplete="email" placeholder="Correo electrónico (validación)" required /></div>
+          <div class="field"><input id="f-prepa" name="preparatoria" type="text" placeholder="Preparatoria de procedencia (texto corto)" required /></div>
+          <div class="field">
+            <select id="f-tema" name="tema" required>
+              <option value="" selected>Tema de interés (plan de estudios 2023, proceso de admisión, campo laboral, inteligencia artificial / tecnologías emergentes).</option>
+              <option>Plan de estudios 2023</option>
+              <option>Proceso de admisión</option>
+              <option>Campo laboral</option>
+              <option>Inteligencia artificial / tecnologías emergentes</option>
+              <option>Otro tema</option>
+            </select>
+          </div>
+          <div class="field"><textarea id="f-mensaje" name="mensaje" placeholder="Mensaje (área de texto breve)" required></textarea></div>
+        </div>
+        <div class="submit-row"><button class="btn" type="submit">ENVIAR SOLICITUD</button></div>
+        <p class="form-note">Al enviar, se abre tu app de correo con el mensaje dirigido a <b>isw-obregon@itson.edu.mx</b>, con copia a la responsable de programa. Solo pulsa Enviar ahí. No guardamos tus datos en esta página.</p>
+        <div class="form-status" id="formStatus" role="status"></div>
+      </form>
     </div>
 
-    <form class="form-card" id="solicitudForm" novalidate>
-      <div class="form-grid">
-        <div class="field">
-          <label for="f-nombre">Nombre completo</label>
-          <input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre completo" required />
-        </div>
-        <div class="field">
-          <label for="f-correo">Correo electrónico</label>
-          <input id="f-correo" name="correo" type="email" autocomplete="email" placeholder="tu@correo.com" required />
-        </div>
-        <div class="field">
-          <label for="f-prepa">Preparatoria de procedencia</label>
-          <input id="f-prepa" name="preparatoria" type="text" placeholder="Nombre de tu preparatoria" required />
-        </div>
-        <div class="field">
-          <label for="f-tema">Tema de interés</label>
-          <select id="f-tema" name="tema" required>
-            <option value="" selected>Elige un tema…</option>
-            <option>Plan de estudios 2023</option>
-            <option>Proceso de admisión</option>
-            <option>Campo laboral</option>
-            <option>Inteligencia artificial / tecnologías emergentes</option>
-            <option>Otro tema</option>
-          </select>
-        </div>
-        <div class="field full">
-          <label for="f-mensaje">Mensaje</label>
-          <textarea id="f-mensaje" name="mensaje" placeholder="Escribe tu duda en pocas palabras…" required></textarea>
-        </div>
+    <div class="links-panel">
+      <h2>DATOS INSTITUCIONALES Y ENLACES OFICIALES</h2>
+      <div class="links-grid">
+        <a class="link-item" href="https://sandbox.itson.edu.mx/oferta/isw/Paginas/isw.aspx" target="_blank" rel="noopener"><span class="ic">☁️</span><span><b>Departamento de</b><br>Computación y diseño ITSON</span></a>
+        <a class="link-item" href="https://www.itson.mx/admisiones" target="_blank" rel="noopener"><span class="ic">🌐</span><span>Portal Oficial de<br><u>Admisiones ITSON</u></span></a>
+        <a class="link-item" href="https://itson.mx/oferta" target="_blank" rel="noopener"><span class="ic">📄</span><span>Oferta Académica<br><u>ISW ITSON</u></span></a>
+        <a class="link-item" href="https://www.itson.mx" target="_blank" rel="noopener"><span class="ic">⚙️</span><span>Facultad de Ingeniería<br><u>ITSON</u></span></a>
       </div>
-      <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-        <button class="btn btn-primary" type="submit" style="border:none;cursor:pointer">ENVIAR SOLICITUD</button>
-        <a class="btn btn-ghost" href="https://wa.me/526442308643?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Ingenier%C3%ADa%20en%20Software%20del%20ITSON" target="_blank" rel="noopener">WhatsApp: +52 (644) 230 8643</a>
-      </div>
-      <p class="form-note">Al enviar, tu correo se abre con el destinatario, el asunto y tu mensaje ya escritos. Solo tienes que pulsar Enviar en tu app de correo. No guardamos tus datos en esta página.</p>
-      <div class="form-status" id="formStatus" role="status"></div>
-    </form>
-
-    <div style="height:28px"></div>
-    <div class="sec-head">
-      <span class="sec-num">DATOS INSTITUCIONALES Y ENLACES OFICIALES</span>
-      <h2>Enlaces relacionados</h2>
-      <p>Consulta siempre la información oficial y actualizada en los canales del ITSON.</p>
-    </div>
-    <div class="links-grid">
-      <a class="link-card" href="https://sandbox.itson.edu.mx/oferta/isw/Paginas/isw.aspx" target="_blank" rel="noopener"><b>Departamento de Computación y Diseño ITSON</b><span>Programa de Ingeniería en Software — objetivo, perfiles y contactos</span></a>
-      <a class="link-card" href="https://www.itson.mx/admisiones" target="_blank" rel="noopener"><b>Portal Oficial de Admisiones ITSON</b><span>itson.mx/admisiones — registro y convocatoria vigente</span></a>
-      <a class="link-card" href="https://itson.mx/oferta" target="_blank" rel="noopener"><b>Oferta Académica ISW ITSON</b><span>itson.mx/oferta — oferta educativa del ITSON</span></a>
-      <a class="link-card" href="https://www.itson.mx" target="_blank" rel="noopener"><b>ITSON — Portal institucional</b><span>itson.mx — universidad, campus y servicios</span></a>
-      <a class="link-card" href="mailto:isw-obregon@itson.edu.mx"><b>Correo del programa — Obregón</b><span>isw-obregon@itson.edu.mx · martha.larrinaga@itson.edu.mx</span></a>
-      <a class="link-card" href="tel:+526444109001"><b>Teléfono — Obregón</b><span>+52 (644) 410-90-01, ext. 1531</span></a>
     </div>
   </div>
 </section>
+
+<a class="chat-fab" href="#contacto" aria-label="¿Dudas? Chatea con nosotros, ir al formulario de contacto"><span class="bubble">¿Dudas?<br>Chatea con nosotros!</span><span class="robot">🤖</span></a>
 
 <footer class="site">
   <div class="wrap">
-    <p class="fine">Página informativa elaborada con datos del PDF de Ingeniería en Software del ITSON (Plan de Estudios 2023) y datos públicos del ITSON. No es una página oficial del Instituto Tecnológico de Sonora. Verifica requisitos, planes de estudio, lugares disponibles y fechas de admisión directamente en los canales oficiales antes de tomar una decisión.</p>
+    <div class="contact-bar" style="padding:0">
+      <div class="wrap" style="padding:0">
+        <div class="resp"><span class="env">✉️</span><div><b>Responsable de programa</b><a href="mailto:isw-obregon@itson.edu.mx">isw-obregon@itson.edu.mx</a> | <a href="mailto:martha.larrinaga@itson.edu.mx">martha.larrinaga@itson.edu.mx</a></div></div>
+        <div class="phones">Teléfono: <a href="tel:+526444109001">+52 (644) 410-90-01, Ext. 1531</a><br>WhatsApp (Únicamente mensajes de texto): <a href="https://wa.me/526442308643" target="_blank" rel="noopener">+52 (644) 230 8643</a> 📞</div>
+      </div>
+    </div>
+    <p class="fine">Página informativa con el diseño y el contenido del PDF de Ingeniería en Software del ITSON (Plan de Estudios 2023). No es una página oficial del Instituto Tecnológico de Sonora. Verifica requisitos, planes de estudio y fechas en los canales oficiales antes de tomar una decisión.</p>
   </div>
 </footer>
 
 <script>
-  // Navegación interactiva: marca el botón de la sección visible
   var navLinks = document.querySelectorAll('.navlinks a[data-nav]');
   var sections = ['inicio','carrera','perfiles','empleo','contacto'].map(function(id){ return document.getElementById(id); }).filter(Boolean);
   function onScroll(){
-    var pos = window.scrollY + 120;
+    var pos = window.scrollY + 140;
     var current = 'inicio';
     sections.forEach(function(sec){ if (sec.offsetTop <= pos) current = sec.id; });
     navLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('data-nav') === current); });
@@ -411,7 +395,6 @@
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
 
-  // Solicitud real: abre el correo con todo listo para enviar al ITSON
   var form = document.getElementById('solicitudForm');
   var statusBox = document.getElementById('formStatus');
   form.addEventListener('submit', function(e){
@@ -445,14 +428,13 @@
       + '&body=' + encodeURIComponent(cuerpo);
     window.location.href = mailto;
     statusBox.innerHTML = '<b>¡Listo!</b> Se abrió tu app de correo con el mensaje dirigido a <b>isw-obregon@itson.edu.mx</b>. Pulsa Enviar ahí para completar tu solicitud.'
-      + '<br><button class="btn btn-ghost" type="button" id="copiarBtn">Copiar mi mensaje</button>';
+      + '<br><button class="btn" type="button" id="copiarBtn" style="margin-top:10px;background:var(--blue);color:#fff;border:none;cursor:pointer;padding:10px 18px;border-radius:999px">Copiar mi mensaje</button>';
     statusBox.classList.add('show');
     var copiar = document.getElementById('copiarBtn');
     if (copiar) {
       copiar.addEventListener('click', function(){
-        var texto = asunto + '\n\n' + cuerpo;
         if (navigator.clipboard) {
-          navigator.clipboard.writeText(texto).then(function(){ copiar.textContent = 'Copiado'; });
+          navigator.clipboard.writeText(asunto + '\n\n' + cuerpo).then(function(){ copiar.textContent = 'Copiado'; });
         }
       });
     }
